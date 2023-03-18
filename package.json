@@ -4,7 +4,13 @@
   "description": "Paseto passport",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
+  },
+  "engines": {
+    "yarn": ">2.0.0",
+    "node": ">= 16.0.0",
+    "npm": "please-use-yarn",
+    "pnpm": "please-use-yarn"
   },
   "repository": {
     "type": "git",
@@ -22,13 +28,21 @@
     "url": "https://github.com/deskbtm-letscollab/passport-paseto/issues"
   },
   "homepage": "https://github.com/deskbtm-letscollab/passport-paseto#readme",
-  "devDependencies": {
-    "@types/node": "16",
-    "@types/passport-strategy": "^0.2.35",
-    "typescript": "^5.0.2"
-  },
   "dependencies": {
     "paseto": "^3.1.2",
     "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "@fastify/cookie": "^8.3.0",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16",
+    "@types/passport-strategy": "^0.2.35",
+    "chai": "^4.3.7",
+    "chai-passport-strategy": "^3.0.0",
+    "fastify": "^4.14.1",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
   }
 }
