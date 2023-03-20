@@ -36,6 +36,10 @@ export class LocalPasetoStrategy extends Strategy {
     ) => void
   ) {
     super();
+    if (typeof verify !== "function") {
+      throw new TypeError("LocalPasetoStrategy requires a verify callback");
+    }
+
     this.options = options;
     this.verify = verify;
   }
@@ -60,6 +64,8 @@ export class LocalPasetoStrategy extends Strategy {
       this.options.key,
       this.options.pasetoVerify
     ).catch(this.fail);
+
+    this.verified = this.verified.bind(this);
 
     try {
       if (this.options.passReqToCallback) {

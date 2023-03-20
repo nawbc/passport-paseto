@@ -7,7 +7,6 @@
     "test": "mocha"
   },
   "engines": {
-    "yarn": ">2.0.0",
     "node": ">= 16.0.0",
     "npm": "please-use-yarn",
     "pnpm": "please-use-yarn"
@@ -34,6 +33,9 @@
   },
   "devDependencies": {
     "@fastify/cookie": "^8.3.0",
+    "@fastify/passport": "^2.2.0",
+    "@fastify/secure-session": "^6.0.0",
+    "@fastify/session": "^10.1.1",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
     "@types/node": "16",
