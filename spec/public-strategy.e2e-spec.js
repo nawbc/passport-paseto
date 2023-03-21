@@ -21,7 +21,7 @@ describe("Public Strategy:e2e", function () {
     );
 
     fastifyPassport.use(
-      "local-paseto",
+      "public-paseto",
       new PublicPasetoStrategy(
         {
           getToken: fromAuthBearer(),
@@ -37,7 +37,7 @@ describe("Public Strategy:e2e", function () {
     app.get(
       "/test/bearer",
       {
-        preValidation: fastifyPassport.authenticate("local-paseto", {
+        preValidation: fastifyPassport.authenticate("public-paseto", {
           authInfo: false,
           session: false,
         }),
