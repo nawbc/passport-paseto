@@ -8,6 +8,11 @@
     "test": "mocha",
     "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist",
+    "src",
+    "tsconfig.json"
+  ],
   "engines": {
     "node": ">= 14.0.0",
     "npm": "please-use-yarn",

@@ -4,7 +4,6 @@
 ## Note Bene
 Only test with Fastify.
 
-
 ## Install
 
 ```shell
