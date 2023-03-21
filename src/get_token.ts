@@ -8,7 +8,7 @@ export const fromAuthBearer = function () {
 
 export const fromAuthScheme = function (scheme: string) {
   return (req) => {
-    const auth = req.headers["authorization"];
+    const auth = req.headers?.["authorization"];
 
     const [prefix, token]: string[] = auth.split(/\s+/g);
 
@@ -21,9 +21,5 @@ export const fromBody = function (field: string) {
 };
 
 export const fromQuery = function (field: string) {
-  return (req) => req?.query[field];
-};
-
-export const fromCustom = function (field: string) {
   return (req) => req?.query[field];
 };

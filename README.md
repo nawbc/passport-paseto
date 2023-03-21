@@ -1,3 +1,5 @@
+![workflow](https://img.shields.io/github/actions/workflow/status/Nawbc/passport-paseto/ci.yml?style=flat-square)
+
 ## This library is not free, it needs your star. 
 ## Note Bene
 Only test with Fastify.
@@ -66,8 +68,13 @@ app.listen();
 #### LocalPasetoStrategyOptions:
 - `key`: `<KeyObject>` The secret key to decrypt with. Alternatively a `'k3.local.[data]'` 
   PASERK string or any input that works for `crypto.createSecretKey()`.
-- `passReqToCallback`: `<boolean>`
+- `passReqToCallback`: `<boolean>` default `false`.
 - `getToken`: `<Function>` `(...args) => (req) => string`
+  - `fromHeader`: extract token from header default `X-Paseto-Token`.
+  - `fromAuthBearer`: extract token from Authorization Bearer.
+  - `fromAuthScheme`: extract token from Authorization, e.g. Basic, Digest ...
+  - `fromBody`: extract token from request body.
+  - `fromQuery`: extract token from request query.
 - `pasetoOptions`: `<Object>`
   - `assertion`: `<string>` &vert; `<Buffer>` PASETO Implicit Assertion
   - `audience`: `<string>` Expected audience value. An exact match must be found in the payload.
@@ -93,6 +100,10 @@ app.listen();
 ### PublicPasetoStrategy (asymmetric key)
 
 ```ts
+const fastifyPassport = require("@fastify/passport");
+const { LocalPasetoStrategy, fromAuthBearer } = require("passport-paseto");
+const { V3 } = require("paseto");
+
 const { secretKey, publicKey } = await V3.generateKey("public", {
   format: "paserk",
 });

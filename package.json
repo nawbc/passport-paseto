@@ -1,10 +1,12 @@
 {
   "name": "passport-paseto",
-  "version": "1.0.0",
+  "version": "0.0.0-alpha.1",
   "description": "Paseto passport",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "mocha"
+    "build": "tsc",
+    "test": "mocha",
+    "prepublishOnly": "npm run build"
   },
   "engines": {
     "node": ">= 14.0.0",
@@ -34,7 +36,6 @@
   "devDependencies": {
     "@fastify/cookie": "^8.3.0",
     "@fastify/passport": "^2.2.0",
-    "@fastify/secure-session": "^6.0.0",
     "@fastify/session": "^10.1.1",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
