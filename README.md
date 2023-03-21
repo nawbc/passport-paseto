@@ -74,7 +74,7 @@ app.listen();
   - `fromAuthScheme`: extract token from Authorization, e.g. Basic, Digest ...
   - `fromBody`: extract token from request body.
   - `fromQuery`: extract token from request query.
-- `pasetoOptions`: `<Object>`
+- `consumeOptions`: `<Object>`
   - `assertion`: `<string>` &vert; `<Buffer>` PASETO Implicit Assertion
   - `audience`: `<string>` Expected audience value. An exact match must be found in the payload.
   - `clockTolerance`: `<string>` Clock Tolerance for comparing timestamps, provided as timespan

@@ -12,7 +12,7 @@ type Verified = (err: Error, user: Record<string, any>, info: any) => void;
 export interface PublicPasetoStrategyOptions {
   getToken?: CustomPasetoTokenFromProvider;
   publicKey?: KeyObject | Buffer | PublicKeyInput | JsonWebKeyInput | string;
-  pasetoOptions?: ConsumeOptions<any>;
+  consumeOptions?: ConsumeOptions<any>;
   passReqToCallback?: boolean;
 }
 
@@ -62,7 +62,7 @@ export class PublicPasetoStrategy extends Strategy {
     const payload = await V3.verify(
       token,
       this.options.publicKey,
-      this.options.pasetoOptions
+      this.options.consumeOptions
     ).catch(this.fail);
 
     this.verified = this.verified.bind(this);
