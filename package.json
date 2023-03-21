@@ -14,9 +14,7 @@
     "tsconfig.json"
   ],
   "engines": {
-    "node": ">= 14.0.0",
-    "npm": "please-use-yarn",
-    "pnpm": "please-use-yarn"
+    "node": ">= 16.0.0"
   },
   "repository": {
     "type": "git",
