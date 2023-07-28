@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nawbc/passport-paseto.git"
+    "url": "git+https://github.com/nawbc/passport-paseto.git"
   },
   "keywords": [
     "passport",
@@ -29,9 +29,9 @@
   "author": "Han",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/deskbtm-letscollab/passport-paseto/issues"
+    "url": "https://github.com/indiebase/passport-paseto/issues"
   },
-  "homepage": "https://github.com/deskbtm-letscollab/passport-paseto#readme",
+  "homepage": "https://github.com/indiebase/passport-paseto#readme",
   "dependencies": {
     "paseto": "^3.1.2",
     "passport-strategy": "^1.0.0"
