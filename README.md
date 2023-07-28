@@ -1,9 +1,5 @@
 ![workflow](https://img.shields.io/github/actions/workflow/status/Nawbc/passport-paseto/ci.yml?style=flat-square)
 
-## This library is not free, it needs your star. 
-## Note Bene
-Only test with Fastify.
-
 ## Install
 
 ```shell
@@ -60,12 +56,13 @@ app.get(
 );
 
 app.listen();
-
 ```
+
 ### LocalPasetoStrategy(options: LocalPasetoStrategyOptions, verify);
 
 #### LocalPasetoStrategyOptions:
-- `key`: `<KeyObject>` The secret key to decrypt with. Alternatively a `'k3.local.[data]'` 
+
+- `key`: `<KeyObject>` The secret key to decrypt with. Alternatively a `'k3.local.[data]'`
   PASERK string or any input that works for `crypto.createSecretKey()`.
 - `passReqToCallback`: `<boolean>` default `false`.
 - `getToken`: `<Function>` `(...args) => (req) => string`
@@ -94,6 +91,7 @@ app.listen();
   - `now`: `<Date>` Date object to be used instead of the current unix epoch timestamp.
     **Default:** 'new Date()'
   - `subject`: `<string>` Expected subject value. An exact match must be found in the payload.
+
 #### Verify callback `([req], payload, next) => void`
 
 ### PublicPasetoStrategy (asymmetric key)
@@ -152,3 +150,7 @@ app.get(
 npm i
 npm test
 ```
+
+## Note Bene
+
+Only test with Fastify.
